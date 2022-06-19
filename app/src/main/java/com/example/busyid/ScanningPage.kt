@@ -1,8 +1,10 @@
 package com.example.busyid
 
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.View
 import android.widget.MediaController
 import android.widget.TextView
@@ -11,13 +13,13 @@ import android.widget.VideoView
 class ScanningPage : AppCompatActivity() {
 
     var videoView: VideoView? = null
-    var mediaController: MediaController ?= null
+    var mediaController: MediaController? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scanning_page)
 
         val st: TextView = findViewById(R.id.ScanningText)
-        st.text = "Scanning Now"
+        st.text = "Scanning for NFC Devices"
 
         videoView = findViewById<View>(R.id.videoView) as VideoView?
 
@@ -26,13 +28,14 @@ class ScanningPage : AppCompatActivity() {
             mediaController!!.setAnchorView(this.videoView)
         }
         videoView!!.setMediaController(mediaController)
-        videoView!!.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.radarcolormatched))
+        videoView!!.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.radaranime))
         videoView!!.requestFocus()
         videoView!!.start()
 
         videoView!!.setOnCompletionListener {
             videoView!!.start()
         }
-    }
 
+
+    }
 }

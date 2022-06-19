@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ScanningPage"
-    android:background = "@color/bgcolor">
+    android:background = "@color/bgcolor"
+    android:layout_gravity="center_vertical">
 
 
     <TextView
@@ -16,7 +17,7 @@
         android:layout_marginTop="112dp"
         android:layout_marginEnd="216dp"
         android:layout_marginBottom="600dp"
-        android:fontFamily="@font/roboto"
+        android:fontFamily="@font/ikarosregular"
         android:gravity="center_vertical"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/seccolor"
@@ -36,11 +37,12 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="65dp"
         android:layout_marginEnd="40dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ScanningText"
-        app:layout_constraintVertical_bias="0.0" />
-
+        app:layout_constraintVertical_bias="0.0"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
